@@ -1,0 +1,92 @@
+{
+  "actorSpecification": 1,
+  "title": "LinkedIn Company Locations Scraper",
+  "description": "One result row. A URL is charged once even when it produces several rows.",
+  "fields": {
+    "type": "object",
+    "properties": {
+      "inputUrl": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "title": "inputUrl"
+      },
+      "companyName": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "title": "companyName"
+      },
+      "headquarters": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "title": "headquarters"
+      },
+      "locationCount": {
+        "type": [
+          "integer",
+          "null"
+        ],
+        "title": "locationCount"
+      },
+      "address": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "title": "address"
+      },
+      "addressLine1": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "title": "addressLine1"
+      },
+      "addressLine2": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "title": "addressLine2"
+      },
+      "isPrimary": {
+        "type": [
+          "boolean",
+          "null"
+        ],
+        "title": "isPrimary"
+      },
+      "success": {
+        "type": "boolean",
+        "title": "success"
+      }
+    }
+  },
+  "views": {
+    "flat": {
+      "title": "Flat results",
+      "transformation": {
+        "fields": [
+          "inputUrl",
+          "companyName",
+          "headquarters",
+          "locationCount",
+          "address",
+          "addressLine1",
+          "addressLine2",
+          "isPrimary",
+          "success"
+        ]
+      },
+      "display": {
+        "component": "table",
+        "properties": {}
+      }
+    }
+  }
+}
